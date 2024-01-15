@@ -28,15 +28,28 @@ function TodoList() {
     ev.preventDefault();
     console.log('form submitted:', newItemDescription);
 
-    const newTaskItems = taskItems.slice();   // no args makes a full copy
 
-    newTaskItems.push({
-      description: newItemDescription,
-      completed: false
-    });
 
-    setTaskItems( newTaskItems );
+    // using spread operator
+    const newTasks = [ ...taskItems, {description: newItemDescription, completed: false} ];
+
+    setTaskItems(newTasks);
+
+
+    // const newTaskItems = taskItems.slice();   // no args makes a full copy
+
+    // newTaskItems.push({
+    //   description: newItemDescription,
+    //   completed: false
+    // });
+
+    // setTaskItems( newTaskItems );
      
+
+
+
+
+
   }
 
 
