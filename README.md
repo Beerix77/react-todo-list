@@ -1,1 +1,1 @@
-A React ToDo List
+A React ToDo listy App
